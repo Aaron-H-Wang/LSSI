@@ -1,0 +1,999 @@
+{
+  "material": "FR79",
+  "seed": 43,
+  "split": "lexicographically sorted every fifth point; inner every fifth training point for validation",
+  "coordinate_definition": {
+    "u_f": "(log10(f) - mean_log10_f) / std_log10_f",
+    "u_B": "(log10(B) - mean_log10_B) / std_log10_B",
+    "mean_log10_f": 2.4399773164829415,
+    "std_log10_f": 0.3392020614146524,
+    "mean_log10_B": 1.830024739679803,
+    "std_log10_B": 0.3160996256498287
+  },
+  "SINDy": {
+    "description": "degree-5 polynomial SINDy with STLSQ in standardized log coordinates",
+    "selected_threshold": 0.2,
+    "inner_validation_mape_percent": 0.8841142521786429,
+    "active_term_count": 19,
+    "candidate_term_count": 21,
+    "terms": [
+      {
+        "frequency_power": 0,
+        "flux_power": 0,
+        "coefficient": 2.171770697341379
+      },
+      {
+        "frequency_power": 0,
+        "flux_power": 1,
+        "coefficient": 0.7866661634828452
+      },
+      {
+        "frequency_power": 1,
+        "flux_power": 0,
+        "coefficient": 0.42035252167245596
+      },
+      {
+        "frequency_power": 1,
+        "flux_power": 1,
+        "coefficient": 0.018729186612447338
+      },
+      {
+        "frequency_power": 2,
+        "flux_power": 0,
+        "coefficient": 0.027052869740297518
+      },
+      {
+        "frequency_power": 0,
+        "flux_power": 3,
+        "coefficient": 0.013435404979827755
+      },
+      {
+        "frequency_power": 1,
+        "flux_power": 2,
+        "coefficient": 0.005849633110804355
+      },
+      {
+        "frequency_power": 2,
+        "flux_power": 1,
+        "coefficient": -0.007056213733835243
+      },
+      {
+        "frequency_power": 3,
+        "flux_power": 0,
+        "coefficient": -0.007691754534409553
+      },
+      {
+        "frequency_power": 0,
+        "flux_power": 4,
+        "coefficient": -0.008797682558469482
+      },
+      {
+        "frequency_power": 1,
+        "flux_power": 3,
+        "coefficient": -0.034933666917672405
+      },
+      {
+        "frequency_power": 2,
+        "flux_power": 2,
+        "coefficient": -0.04304790906392248
+      },
+      {
+        "frequency_power": 3,
+        "flux_power": 1,
+        "coefficient": -0.02363188555423967
+      },
+      {
+        "frequency_power": 4,
+        "flux_power": 0,
+        "coefficient": -0.007686196878948889
+      },
+      {
+        "frequency_power": 0,
+        "flux_power": 5,
+        "coefficient": -0.004306159878679096
+      },
+      {
+        "frequency_power": 1,
+        "flux_power": 4,
+        "coefficient": -0.016504758866868186
+      },
+      {
+        "frequency_power": 2,
+        "flux_power": 3,
+        "coefficient": -0.034914036849942306
+      },
+      {
+        "frequency_power": 3,
+        "flux_power": 2,
+        "coefficient": -0.03457726821310424
+      },
+      {
+        "frequency_power": 4,
+        "flux_power": 1,
+        "coefficient": -0.01199099505788416
+      }
+    ],
+    "test": {
+      "mape_percent": 0.8582586716206712,
+      "r2": 0.9998468015743979,
+      "rmse_mw_cm3": 4.313635861547414,
+      "mean_residual_percent": 0.004509798111248531,
+      "std_residual_percent": 1.1825758129334332
+    }
+  },
+  "GP-SR": {
+    "description": "tree-based GP symbolic regression in standardized log coordinates",
+    "inner_validation_mape_percent": 2.5221324205001823,
+    "node_count": 7,
+    "tree_node_count": 5,
+    "depth": 2,
+    "affine_intercept": 2.1820367761919037,
+    "affine_slope": 0.8026209411998334,
+    "expression": "log10(P) = 2.1820368 + (0.80262094) * ((protected_div(u_f, 1.90929) + u_B))",
+    "primitive_set": [
+      "add",
+      "sub",
+      "mul",
+      "div",
+      "log",
+      "sqrt",
+      "tanh"
+    ],
+    "progress": [
+      {
+        "generation": 0,
+        "training_objective": 0.0017813094303322967,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 7
+      },
+      {
+        "generation": 1,
+        "training_objective": 0.0017813094303322967,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 7
+      },
+      {
+        "generation": 2,
+        "training_objective": 0.0017813094303322967,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 7
+      },
+      {
+        "generation": 3,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 4,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 5,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 6,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 7,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 8,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 9,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 10,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 11,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 12,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 13,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 14,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 15,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 16,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 17,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 18,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 19,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 20,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 21,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 22,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 23,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 24,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 25,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 26,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 27,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 28,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 29,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 30,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 31,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 32,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 33,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 34,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 35,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 36,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 37,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 38,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 39,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 40,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 41,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 42,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 43,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 44,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 45,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 46,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 47,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 48,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 49,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 50,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 51,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 52,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 53,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 54,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 55,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 56,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 57,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 58,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 59,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 60,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 61,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 62,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 63,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 64,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 65,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 66,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 67,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 68,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 69,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 70,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 71,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 72,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 73,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 74,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 75,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 76,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 77,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 78,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 79,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 80,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 81,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 82,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 83,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 84,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 85,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 86,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 87,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 88,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 89,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 90,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 91,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 92,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 93,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 94,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 95,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 96,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 97,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 98,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 99,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 100,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 101,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 102,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 103,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 104,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 105,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 106,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 107,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 108,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 109,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 110,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 111,
+        "training_objective": 0.0013813094303322965,
+        "best_validation_mape_percent": 3.700831604779848,
+        "best_node_count": 5
+      },
+      {
+        "generation": 112,
+        "training_objective": 0.0013008924890148717,
+        "best_validation_mape_percent": 3.2742070664133913,
+        "best_node_count": 5
+      },
+      {
+        "generation": 113,
+        "training_objective": 0.0013008924890148717,
+        "best_validation_mape_percent": 3.2742070664133913,
+        "best_node_count": 5
+      },
+      {
+        "generation": 114,
+        "training_objective": 0.0013008924890148717,
+        "best_validation_mape_percent": 3.2742070664133913,
+        "best_node_count": 5
+      },
+      {
+        "generation": 115,
+        "training_objective": 0.0013008924890148717,
+        "best_validation_mape_percent": 3.2742070664133913,
+        "best_node_count": 5
+      },
+      {
+        "generation": 116,
+        "training_objective": 0.0013008924890148717,
+        "best_validation_mape_percent": 3.2742070664133913,
+        "best_node_count": 5
+      },
+      {
+        "generation": 117,
+        "training_objective": 0.0013008924890148717,
+        "best_validation_mape_percent": 3.2742070664133913,
+        "best_node_count": 5
+      },
+      {
+        "generation": 118,
+        "training_objective": 0.0013008924890148717,
+        "best_validation_mape_percent": 3.2742070664133913,
+        "best_node_count": 5
+      },
+      {
+        "generation": 119,
+        "training_objective": 0.0013008924890148717,
+        "best_validation_mape_percent": 3.2742070664133913,
+        "best_node_count": 5
+      },
+      {
+        "generation": 120,
+        "training_objective": 0.0013008924890148717,
+        "best_validation_mape_percent": 3.2742070664133913,
+        "best_node_count": 5
+      },
+      {
+        "generation": 121,
+        "training_objective": 0.0012128265270448626,
+        "best_validation_mape_percent": 2.69675915255249,
+        "best_node_count": 5
+      },
+      {
+        "generation": 122,
+        "training_objective": 0.0012128265270448626,
+        "best_validation_mape_percent": 2.69675915255249,
+        "best_node_count": 5
+      },
+      {
+        "generation": 123,
+        "training_objective": 0.0012128265270448626,
+        "best_validation_mape_percent": 2.591336190953264,
+        "best_node_count": 5
+      },
+      {
+        "generation": 124,
+        "training_objective": 0.0012128265270448626,
+        "best_validation_mape_percent": 2.591336190953264,
+        "best_node_count": 5
+      },
+      {
+        "generation": 125,
+        "training_objective": 0.0012128265270448626,
+        "best_validation_mape_percent": 2.591336190953264,
+        "best_node_count": 5
+      },
+      {
+        "generation": 126,
+        "training_objective": 0.0012128265270448626,
+        "best_validation_mape_percent": 2.591336190953264,
+        "best_node_count": 5
+      },
+      {
+        "generation": 127,
+        "training_objective": 0.0012128265270448626,
+        "best_validation_mape_percent": 2.591336190953264,
+        "best_node_count": 5
+      },
+      {
+        "generation": 128,
+        "training_objective": 0.0012128265270448626,
+        "best_validation_mape_percent": 2.591336190953264,
+        "best_node_count": 5
+      },
+      {
+        "generation": 129,
+        "training_objective": 0.001208142125398649,
+        "best_validation_mape_percent": 2.5292993236650503,
+        "best_node_count": 5
+      },
+      {
+        "generation": 130,
+        "training_objective": 0.001208142125398649,
+        "best_validation_mape_percent": 2.5292993236650503,
+        "best_node_count": 5
+      },
+      {
+        "generation": 131,
+        "training_objective": 0.001208142125398649,
+        "best_validation_mape_percent": 2.5292993236650503,
+        "best_node_count": 5
+      },
+      {
+        "generation": 132,
+        "training_objective": 0.0011979344818461345,
+        "best_validation_mape_percent": 2.5292993236650503,
+        "best_node_count": 5
+      },
+      {
+        "generation": 133,
+        "training_objective": 0.0011979344818461345,
+        "best_validation_mape_percent": 2.5292993236650503,
+        "best_node_count": 5
+      },
+      {
+        "generation": 134,
+        "training_objective": 0.0011979344818461345,
+        "best_validation_mape_percent": 2.5292993236650503,
+        "best_node_count": 5
+      },
+      {
+        "generation": 135,
+        "training_objective": 0.0011979344818461345,
+        "best_validation_mape_percent": 2.5221324205001823,
+        "best_node_count": 5
+      },
+      {
+        "generation": 136,
+        "training_objective": 0.0011979344818461345,
+        "best_validation_mape_percent": 2.5221324205001823,
+        "best_node_count": 5
+      },
+      {
+        "generation": 137,
+        "training_objective": 0.0011979344818461345,
+        "best_validation_mape_percent": 2.5221324205001823,
+        "best_node_count": 5
+      },
+      {
+        "generation": 138,
+        "training_objective": 0.0011979344818461345,
+        "best_validation_mape_percent": 2.5221324205001823,
+        "best_node_count": 5
+      },
+      {
+        "generation": 139,
+        "training_objective": 0.0011979344818461345,
+        "best_validation_mape_percent": 2.5221324205001823,
+        "best_node_count": 5
+      },
+      {
+        "generation": 140,
+        "training_objective": 0.0011979344818461345,
+        "best_validation_mape_percent": 2.5221324205001823,
+        "best_node_count": 5
+      }
+    ],
+    "test": {
+      "mape_percent": 2.429086358724987,
+      "r2": 0.9959557247507286,
+      "rmse_mw_cm3": 22.16341521778241,
+      "mean_residual_percent": 0.10514461186957827,
+      "std_residual_percent": 3.1330897297656293
+    }
+  },
+  "prediction_path": "D:\\LLM_Agent\\Codex\\LSSI\\0. Others\\SINDy_GP_SR\\results\\FR79_predictions.csv"
+}

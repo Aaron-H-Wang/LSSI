@@ -1,0 +1,4 @@
+material,audit_start_epoch,audit_end_epoch,max_abs_coefficient_change,max_abs_raw_coordinate_change,coefficient_at_max,raw_coordinate_at_max,coefficient_tolerance,raw_coordinate_tolerance,converged
+FR78,31200,41100,7.808208465576172e-05,0.0007884800434112549,coef_1,raw_s_B,0.00015,0.001,True
+FR79,31200,41100,0.00011992454528808594,0.0008949041366577148,coef_1,raw_h_B,0.00015,0.001,True
+FR95,31200,41100,0.00010085105895996094,0.0007019340991973877,coef_1,raw_s_B,0.00015,0.001,True

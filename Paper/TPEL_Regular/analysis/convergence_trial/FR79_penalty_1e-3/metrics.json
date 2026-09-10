@@ -1,0 +1,140 @@
+{
+  "material": "FR79",
+  "samples": 1240,
+  "train_samples": 992,
+  "test_samples": 248,
+  "frequency_khz": [
+    59.5,
+    893.1
+  ],
+  "flux_density_mt": [
+    12.528980322409854,
+    377.999715441794
+  ],
+  "loss_mw_cm3": [
+    7.759014158062442,
+    2004.3099831454329
+  ],
+  "normalization": {
+    "f_khz": 360.3162322801159,
+    "b_mt": 88.4503697030867,
+    "p_mw_cm3": 288.6610049688393
+  },
+  "train": {
+    "mape_percent": 0.8800378651984088,
+    "rmse_mw_cm3": 8.096164993126918,
+    "r2": 0.9994209778487919,
+    "mean_residual_percent": 0.059045532780628456,
+    "std_residual_percent": 1.3822396365175482
+  },
+  "test": {
+    "mape_percent": 0.8701256175153568,
+    "rmse_mw_cm3": 8.160244673281364,
+    "r2": 0.9994517562349496,
+    "mean_residual_percent": 0.033832022748977085,
+    "std_residual_percent": 1.294788343677934
+  },
+  "active_term_count": 4,
+  "active_terms": [
+    {
+      "index": 1,
+      "name": "hysteresis with HF roll-off",
+      "coefficient": 0.759415328502655,
+      "contribution_percent": 40.84206008911133
+    },
+    {
+      "index": 2,
+      "name": "eddy-current with HF roll-off",
+      "coefficient": 0.1994117945432663,
+      "contribution_percent": 9.309487342834473
+    },
+    {
+      "index": 4,
+      "name": "saturation power law",
+      "coefficient": 0.44245684146881104,
+      "contribution_percent": 48.26972579956055
+    },
+    {
+      "index": 9,
+      "name": "B",
+      "coefficient": 0.015804123133420944,
+      "contribution_percent": 1.5787266492843628
+    }
+  ],
+  "learned_parameters": {
+    "alpha_h": 1.173292636871338,
+    "beta_h": 2.181447982788086,
+    "gamma_h": -0.3185034990310669,
+    "alpha_e": 2.048898696899414,
+    "beta_e": 2.0785887241363525,
+    "alpha_a": 1.5,
+    "beta_a": 1.5,
+    "alpha_s": 1.097949743270874,
+    "beta_s": 3.1496694087982178,
+    "delta": 7.461171634343559e-40,
+    "fc_e_khz": 1590.7195235446966,
+    "pc_e": 2.86938738822937,
+    "fc_h_khz": 2620.554100329209,
+    "pc_h": 2.892976760864258
+  },
+  "settings": {
+    "material": "FR79",
+    "data": "2. LSSI\\FR79\\CoreLossData_FR79.mat",
+    "output": "Paper\\TPEL_Regular\\analysis\\convergence_trial\\FR79_penalty_1e-3",
+    "seed": 0,
+    "threads": 4,
+    "warmup_epochs": 1200,
+    "discovery_epochs": 40000,
+    "polish_steps": 100,
+    "learning_rate": 0.001,
+    "weight_decay": 0.002,
+    "prune_threshold": 0.001,
+    "prune_start": 0.75,
+    "prune_interval": 100,
+    "min_terms": 2,
+    "min_contribution": 0.001,
+    "raw_parameter_penalty": 0.001
+  },
+  "shared_bounds": {
+    "h": [
+      0.8,
+      1.3,
+      2.0,
+      2.8
+    ],
+    "e": [
+      1.8,
+      2.2,
+      1.8,
+      2.2
+    ],
+    "a": [
+      1.3,
+      1.7,
+      1.3,
+      1.7
+    ],
+    "s": [
+      0.9,
+      1.2,
+      2.8,
+      3.5
+    ],
+    "fc_e": [
+      2.0,
+      6.0
+    ],
+    "pc_e": [
+      1.0,
+      4.0
+    ],
+    "fc_h": [
+      3.0,
+      10.0
+    ],
+    "pc_h": [
+      1.0,
+      4.0
+    ]
+  }
+}

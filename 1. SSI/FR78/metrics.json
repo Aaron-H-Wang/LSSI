@@ -1,0 +1,71 @@
+{
+  "material": "FR78",
+  "samples": 1320,
+  "frequency_khz": [
+    53.4,
+    1030.0
+  ],
+  "flux_density_mt": [
+    4.519486206516819,
+    189.9169794281567
+  ],
+  "test_mape_percent": 1.8971099853515625,
+  "test_r2": 0.9997389824305293,
+  "active_term_count": 9,
+  "active_terms": [
+    {
+      "index": 46,
+      "label": "f^1.8 * B^1.6",
+      "coefficient": 0.4481795132160187,
+      "contribution_percent": 13.111133575439453
+    },
+    {
+      "index": 74,
+      "label": "f^1 * B^2 / (1+(f/0.5)^2)",
+      "coefficient": 0.3525782525539398,
+      "contribution_percent": 7.3852434158325195
+    },
+    {
+      "index": 77,
+      "label": "f^1 * B^2 / (1+(f/0.75)^2)",
+      "coefficient": 0.6389755010604858,
+      "contribution_percent": 16.698118209838867
+    },
+    {
+      "index": 81,
+      "label": "f^1.5 * B^2.4 / (1+(f/1)^2)",
+      "coefficient": 0.3783325254917145,
+      "contribution_percent": 8.778800010681152
+    },
+    {
+      "index": 91,
+      "label": "f^2 * B^2 / (1+(f/3)^2)",
+      "coefficient": 0.7850306630134583,
+      "contribution_percent": 18.131128311157227
+    },
+    {
+      "index": 92,
+      "label": "f^1 * B^2 * ln(B)",
+      "coefficient": 0.4633391797542572,
+      "contribution_percent": 12.462372779846191
+    },
+    {
+      "index": 95,
+      "label": "f^1.4 * B^2.4 * ln(f)",
+      "coefficient": 0.22841136157512665,
+      "contribution_percent": 6.7996015548706055
+    },
+    {
+      "index": 96,
+      "label": "f^1.8 * B^2.4 * ln(B)",
+      "coefficient": 0.49033644795417786,
+      "contribution_percent": 8.313436508178711
+    },
+    {
+      "index": 97,
+      "label": "f^1.8 * B^2.4 * ln(f)",
+      "coefficient": 0.41897472739219666,
+      "contribution_percent": 8.320164680480957
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "material": "FR79",
+  "samples": 1240,
+  "frequency_khz": [
+    59.5,
+    893.1
+  ],
+  "flux_density_mt": [
+    12.528980322409854,
+    377.999715441794
+  ],
+  "test_mape_percent": 1.0125775337219238,
+  "test_r2": 0.9994935337027451,
+  "active_term_count": 11,
+  "active_terms": [
+    {
+      "index": 3,
+      "label": "f^1 * B^2",
+      "coefficient": 0.1656307429075241,
+      "contribution_percent": 10.598094940185547
+    },
+    {
+      "index": 4,
+      "label": "f^1 * B^2.2",
+      "coefficient": 0.14915801584720612,
+      "contribution_percent": 10.179290771484375
+    },
+    {
+      "index": 5,
+      "label": "f^1 * B^2.4",
+      "coefficient": 0.08380948752164841,
+      "contribution_percent": 6.210910320281982
+    },
+    {
+      "index": 13,
+      "label": "f^1.2 * B^2.2",
+      "coefficient": 0.16196593642234802,
+      "contribution_percent": 9.719072341918945
+    },
+    {
+      "index": 41,
+      "label": "f^1.6 * B^2.4",
+      "coefficient": 0.21911239624023438,
+      "contribution_percent": 11.231042861938477
+    },
+    {
+      "index": 51,
+      "label": "f^1.8 * B^2.5",
+      "coefficient": 0.2671256363391876,
+      "contribution_percent": 12.848006248474121
+    },
+    {
+      "index": 74,
+      "label": "f^1 * B^2 / (1+(f/0.5)^2)",
+      "coefficient": 0.2098492980003357,
+      "contribution_percent": 6.446728706359863
+    },
+    {
+      "index": 90,
+      "label": "f^1.5 * B^2.4 / (1+(f/3)^2)",
+      "coefficient": 0.26010584831237793,
+      "contribution_percent": 12.704019546508789
+    },
+    {
+      "index": 92,
+      "label": "f^1 * B^2 * ln(B)",
+      "coefficient": 0.1840413510799408,
+      "contribution_percent": 7.303889751434326
+    },
+    {
+      "index": 98,
+      "label": "f * B^2 * (exp(B/2)-1)",
+      "coefficient": 0.07229393720626831,
+      "contribution_percent": 7.4249653816223145
+    },
+    {
+      "index": 99,
+      "label": "f * B^2 * (exp(B/4)-1)",
+      "coefficient": 0.14990952610969543,
+      "contribution_percent": 5.33397102355957
+    }
+  ]
+}

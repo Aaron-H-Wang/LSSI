@@ -1,0 +1,97 @@
+{
+  "material": "FR95",
+  "samples": 1320,
+  "train_samples": 1056,
+  "test_samples": 264,
+  "frequency_khz": [
+    52.44,
+    1029.0
+  ],
+  "flux_density_mt": [
+    10.972366063625172,
+    391.08580805166696
+  ],
+  "loss_mw_cm3": [
+    7.16304213826205,
+    1643.8006269044117
+  ],
+  "normalization": {
+    "f_khz": 372.5722676040187,
+    "b_mt": 102.59707939824472,
+    "p_mw_cm3": 303.9456536522968
+  },
+  "train": {
+    "mape_percent": 1.0562694603345877,
+    "rmse_mw_cm3": 3.09518257528266,
+    "r2": 0.9999007418359576,
+    "mean_residual_percent": 0.2535778117353088,
+    "std_residual_percent": 1.7855292375125997
+  },
+  "test": {
+    "mape_percent": 1.0403766237701013,
+    "rmse_mw_cm3": 3.369560491448728,
+    "r2": 0.9998765315308107,
+    "mean_residual_percent": 0.31978671114981067,
+    "std_residual_percent": 1.7375455306423264
+  },
+  "active_term_count": 4,
+  "active_terms": [
+    {
+      "index": 1,
+      "name": "hysteresis with HF roll-off",
+      "coefficient": 0.77642422914505,
+      "contribution_percent": 39.61299514770508
+    },
+    {
+      "index": 2,
+      "name": "eddy-current with HF roll-off",
+      "coefficient": 0.8839268088340759,
+      "contribution_percent": 35.41660690307617
+    },
+    {
+      "index": 4,
+      "name": "saturation power law",
+      "coefficient": 0.2102174162864685,
+      "contribution_percent": 23.232574462890625
+    },
+    {
+      "index": 9,
+      "name": "B",
+      "coefficient": 0.017403461039066315,
+      "contribution_percent": 1.7378294467926025
+    }
+  ],
+  "learned_parameters": {
+    "alpha_h": 1.2041864395141602,
+    "beta_h": 2.6799521446228027,
+    "gamma_h": -0.38528820872306824,
+    "alpha_e": 2.1998744010925293,
+    "beta_e": 2.006422758102417,
+    "alpha_a": 1.5,
+    "beta_a": 1.5,
+    "alpha_s": 1.191002368927002,
+    "beta_s": 3.298095226287842,
+    "delta": -1.2164055109024048,
+    "fc_e_khz": 1150.5833962106324,
+    "pc_e": 3.999431848526001,
+    "fc_h_khz": 1183.0747795008429,
+    "pc_h": 1.1003570556640625
+  },
+  "settings": {
+    "material": "FR95",
+    "data": "2. LSSI\\FR95\\CoreLossData_FR95.mat",
+    "output": "2. LSSI\\FR95\\robustness\\seed_1",
+    "seed": 1,
+    "threads": 2,
+    "warmup_epochs": 1200,
+    "discovery_epochs": 20000,
+    "polish_steps": 100,
+    "learning_rate": 0.001,
+    "weight_decay": 0.002,
+    "prune_threshold": 0.001,
+    "prune_start": 0.75,
+    "prune_interval": 100,
+    "min_terms": 2,
+    "min_contribution": 0.001
+  }
+}

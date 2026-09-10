@@ -1,0 +1,65 @@
+{
+  "aggregation": "one radar computed from all FR78, FR79, and FR95 results",
+  "normalization": {
+    "accuracy": "inverse arithmetic-mean test MAPE across three materials, mapped to [1, 5]",
+    "model_complexity": "inverse log10 geometric-mean learned parameter count, mapped to [1, 5]",
+    "qualitative_axes": "fixed 1--5 rubric inherited from the TPEL Letter",
+    "overall_benefit": "arithmetic mean of the preceding five axes"
+  },
+  "mean_mape_percent": {
+    "SE": 8.619135284198912,
+    "RF": 3.7306918327041285,
+    "FNN": 0.5318022642697987,
+    "SSI": 1.4898958396911623,
+    "LSSI": 1.2950699247770878
+  },
+  "geometric_mean_parameter_count": {
+    "SE": 3.0000000000000004,
+    "RF": 261341.80725892494,
+    "FNN": 4417.000000000003,
+    "SSI": 8.849344009597909,
+    "LSSI": 15.0
+  },
+  "scores": {
+    "SE": {
+      "Accuracy": 1.0,
+      "Model\nComplexity": 5.0,
+      "Physical\nInterpretability": 5.0,
+      "Design\nSimplicity": 5.0,
+      "Implementative\nFeasibility": 5.0,
+      "Overall\nBenefit": 4.2
+    },
+    "RF": {
+      "Accuracy": 3.417827206792892,
+      "Model\nComplexity": 1.0,
+      "Physical\nInterpretability": 1.2,
+      "Design\nSimplicity": 2.2,
+      "Implementative\nFeasibility": 2.5,
+      "Overall\nBenefit": 2.0635654413585782
+    },
+    "FNN": {
+      "Accuracy": 5.0,
+      "Model\nComplexity": 2.434858343905493,
+      "Physical\nInterpretability": 1.0,
+      "Design\nSimplicity": 3.0,
+      "Implementative\nFeasibility": 3.0,
+      "Overall\nBenefit": 2.8869716687810985
+    },
+    "SSI": {
+      "Accuracy": 4.526126314788623,
+      "Model\nComplexity": 4.619610129889992,
+      "Physical\nInterpretability": 4.6,
+      "Design\nSimplicity": 4.5,
+      "Implementative\nFeasibility": 4.8,
+      "Overall\nBenefit": 4.609147288935723
+    },
+    "LSSI": {
+      "Accuracy": 4.622487334884607,
+      "Model\nComplexity": 4.434042425210024,
+      "Physical\nInterpretability": 5.0,
+      "Design\nSimplicity": 4.8,
+      "Implementative\nFeasibility": 5.0,
+      "Overall\nBenefit": 4.771305952018926
+    }
+  }
+}
