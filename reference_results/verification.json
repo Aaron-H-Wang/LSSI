@@ -1,0 +1,229 @@
+{
+  "FR78": {
+    "test_mape_percent": 1.9277485609054565,
+    "reference_mape_percent": 1.9277489723214054,
+    "active_terms": [
+      "hysteresis",
+      "eddy",
+      "saturation",
+      "aux_B"
+    ],
+    "within_0_005_percentage_points": true,
+    "ssi": {
+      "test_mape_percent": 1.8971099853515625,
+      "test_r2": 0.9997389912605286,
+      "active_term_count": 9,
+      "active_terms": [
+        {
+          "index": 91,
+          "label": "f^2 * B^2 / (1+(f/3)^2)",
+          "coefficient": 0.7850306630134583,
+          "contribution_pct": 18.131128311157227
+        },
+        {
+          "index": 77,
+          "label": "f^1 * B^2 / (1+(f/0.75)^2)",
+          "coefficient": 0.6389755010604858,
+          "contribution_pct": 16.698118209838867
+        },
+        {
+          "index": 46,
+          "label": "f^1.8 * B^1.6",
+          "coefficient": 0.4481795132160187,
+          "contribution_pct": 13.111133575439453
+        },
+        {
+          "index": 92,
+          "label": "f^1 * B^2 * ln(B)",
+          "coefficient": 0.4633391797542572,
+          "contribution_pct": 12.462372779846191
+        },
+        {
+          "index": 81,
+          "label": "f^1.5 * B^2.4 / (1+(f/1)^2)",
+          "coefficient": 0.3783325254917145,
+          "contribution_pct": 8.778800010681152
+        },
+        {
+          "index": 97,
+          "label": "f^1.8 * B^2.4 * ln(f)",
+          "coefficient": 0.41897472739219666,
+          "contribution_pct": 8.320164680480957
+        },
+        {
+          "index": 96,
+          "label": "f^1.8 * B^2.4 * ln(B)",
+          "coefficient": 0.49033644795417786,
+          "contribution_pct": 8.313436508178711
+        },
+        {
+          "index": 74,
+          "label": "f^1 * B^2 / (1+(f/0.5)^2)",
+          "coefficient": 0.3525782525539398,
+          "contribution_pct": 7.3852434158325195
+        },
+        {
+          "index": 95,
+          "label": "f^1.4 * B^2.4 * ln(f)",
+          "coefficient": 0.22841136157512665,
+          "contribution_pct": 6.7996015548706055
+        }
+      ],
+      "cpu_threads": 12
+    }
+  },
+  "FR79": {
+    "test_mape_percent": 0.8464854955673218,
+    "reference_mape_percent": 0.8464859025774197,
+    "active_terms": [
+      "hysteresis",
+      "eddy",
+      "saturation",
+      "aux_B"
+    ],
+    "within_0_005_percentage_points": true,
+    "ssi": {
+      "test_mape_percent": 1.0125775337219238,
+      "test_r2": 0.9994935393333435,
+      "active_term_count": 11,
+      "active_terms": [
+        {
+          "index": 51,
+          "label": "f^1.8 * B^2.5",
+          "coefficient": 0.2671256363391876,
+          "contribution_pct": 12.848006248474121
+        },
+        {
+          "index": 90,
+          "label": "f^1.5 * B^2.4 / (1+(f/3)^2)",
+          "coefficient": 0.26010584831237793,
+          "contribution_pct": 12.704019546508789
+        },
+        {
+          "index": 41,
+          "label": "f^1.6 * B^2.4",
+          "coefficient": 0.21911239624023438,
+          "contribution_pct": 11.231042861938477
+        },
+        {
+          "index": 3,
+          "label": "f^1 * B^2",
+          "coefficient": 0.1656307429075241,
+          "contribution_pct": 10.598094940185547
+        },
+        {
+          "index": 4,
+          "label": "f^1 * B^2.2",
+          "coefficient": 0.14915801584720612,
+          "contribution_pct": 10.179290771484375
+        },
+        {
+          "index": 13,
+          "label": "f^1.2 * B^2.2",
+          "coefficient": 0.16196593642234802,
+          "contribution_pct": 9.719072341918945
+        },
+        {
+          "index": 98,
+          "label": "f * B^2 * (exp(B/2)-1)",
+          "coefficient": 0.07229393720626831,
+          "contribution_pct": 7.4249653816223145
+        },
+        {
+          "index": 92,
+          "label": "f^1 * B^2 * ln(B)",
+          "coefficient": 0.1840413510799408,
+          "contribution_pct": 7.303889751434326
+        },
+        {
+          "index": 74,
+          "label": "f^1 * B^2 / (1+(f/0.5)^2)",
+          "coefficient": 0.2098492980003357,
+          "contribution_pct": 6.446728706359863
+        },
+        {
+          "index": 5,
+          "label": "f^1 * B^2.4",
+          "coefficient": 0.08380948752164841,
+          "contribution_pct": 6.210910320281982
+        },
+        {
+          "index": 99,
+          "label": "f * B^2 * (exp(B/4)-1)",
+          "coefficient": 0.14990952610969543,
+          "contribution_pct": 5.33397102355957
+        }
+      ],
+      "cpu_threads": 12
+    }
+  },
+  "FR95": {
+    "test_mape_percent": 1.1109747886657715,
+    "reference_mape_percent": 1.110974899432438,
+    "active_terms": [
+      "hysteresis",
+      "eddy",
+      "saturation",
+      "aux_B"
+    ],
+    "within_0_005_percentage_points": true,
+    "ssi": {
+      "test_mape_percent": 1.5955884456634521,
+      "test_r2": 0.9996140599250793,
+      "active_term_count": 7,
+      "active_terms": [
+        {
+          "index": 91,
+          "label": "f^2 * B^2 / (1+(f/3)^2)",
+          "coefficient": 1.2382211685180664,
+          "contribution_pct": 32.178096771240234
+        },
+        {
+          "index": 77,
+          "label": "f^1 * B^2 / (1+(f/0.75)^2)",
+          "coefficient": 0.45389726758003235,
+          "contribution_pct": 12.88958740234375
+        },
+        {
+          "index": 92,
+          "label": "f^1 * B^2 * ln(B)",
+          "coefficient": 0.4062211215496063,
+          "contribution_pct": 11.51134204864502
+        },
+        {
+          "index": 37,
+          "label": "f^1.6 * B^1.6",
+          "coefficient": 0.33633261919021606,
+          "contribution_pct": 11.298796653747559
+        },
+        {
+          "index": 95,
+          "label": "f^1.4 * B^2.4 * ln(f)",
+          "coefficient": 0.3539027273654938,
+          "contribution_pct": 11.197623252868652
+        },
+        {
+          "index": 74,
+          "label": "f^1 * B^2 / (1+(f/0.5)^2)",
+          "coefficient": 0.4662455916404724,
+          "contribution_pct": 10.547375679016113
+        },
+        {
+          "index": 94,
+          "label": "f^1.4 * B^2.4 * ln(B)",
+          "coefficient": 0.42724019289016724,
+          "contribution_pct": 10.377172470092773
+        }
+      ],
+      "cpu_threads": 12
+    }
+  },
+  "environment": {
+    "torch_version": "2.14.0+cpu",
+    "python_version": "3.12.14",
+    "lssi_cpu_threads": 4,
+    "ssi_cpu_threads": 12,
+    "lssi_tests_passed": 19,
+    "ssi_tests_passed": 20
+  }
+}

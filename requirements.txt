@@ -1,0 +1,8 @@
+# Core dependencies
+torch>=2.0
+numpy>=1.23
+scipy>=1.9
+PyYAML>=6.0
+
+# Development / testing (optional)
+pytest>=7.0

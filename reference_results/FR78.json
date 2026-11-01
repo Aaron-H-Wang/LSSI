@@ -1,0 +1,203 @@
+{
+  "material": "FR78",
+  "lssi": {
+    "material": "FR78",
+    "samples": 1320,
+    "train_samples": 1056,
+    "test_samples": 264,
+    "frequency_khz": [
+      53.4,
+      1030.0
+    ],
+    "flux_density_mt": [
+      4.519486206516819,
+      189.9169794281567
+    ],
+    "loss_mw_cm3": [
+      1.3666829620127892,
+      374.2445711302931
+    ],
+    "normalization": {
+      "f_khz": 382.7853489842271,
+      "b_mt": 44.71381051929912,
+      "p_mw_cm3": 59.79722672272075
+    },
+    "train": {
+      "mape_percent": 1.966605326949926,
+      "rmse_mw_cm3": 0.9753296182699986,
+      "r2": 0.9997816408611896,
+      "mean_residual_percent": -0.08584729713319567,
+      "std_residual_percent": 3.157780413867454
+    },
+    "test": {
+      "mape_percent": 1.9277489723214054,
+      "rmse_mw_cm3": 1.16794271522404,
+      "r2": 0.9997405574410938,
+      "mean_residual_percent": -0.09308557177563406,
+      "std_residual_percent": 3.1390157297517214
+    },
+    "active_term_count": 4,
+    "active_terms": [
+      {
+        "index": 1,
+        "name": "hysteresis with HF roll-off",
+        "coefficient": 0.6190630793571472,
+        "contribution_percent": 37.400691986083984
+      },
+      {
+        "index": 2,
+        "name": "eddy-current with HF roll-off",
+        "coefficient": 0.7402030229568481,
+        "contribution_percent": 30.171186447143555
+      },
+      {
+        "index": 4,
+        "name": "saturation power law",
+        "coefficient": 0.27110642194747925,
+        "contribution_percent": 29.74995994567871
+      },
+      {
+        "index": 9,
+        "name": "B",
+        "coefficient": 0.02672448754310608,
+        "contribution_percent": 2.678158760070801
+      }
+    ],
+    "learned_parameters": {
+      "alpha_h": 1.1074663400650024,
+      "beta_h": 2.754666328430176,
+      "gamma_h": -0.5365476012229919,
+      "alpha_e": 2.187666654586792,
+      "beta_e": 2.050229787826538,
+      "alpha_a": 1.5,
+      "beta_a": 1.5,
+      "alpha_s": 1.1792291402816772,
+      "beta_s": 3.194474935531616,
+      "delta": -1.971162128604401e-38,
+      "fc_e_khz": 1707.0510963704244,
+      "pc_e": 3.8158979415893555,
+      "fc_h_khz": 2902.628881759999,
+      "pc_h": 2.9474759101867676
+    },
+    "settings": {
+      "material": "FR78",
+      "seed": 0,
+      "threads": 4,
+      "warmup_epochs": 1200,
+      "discovery_epochs": 40000,
+      "polish_steps": 100,
+      "learning_rate": 0.001,
+      "weight_decay": 0.002,
+      "prune_threshold": 0.001,
+      "prune_start": 0.75,
+      "prune_interval": 100,
+      "min_terms": 2,
+      "min_contribution": 0.001,
+      "raw_parameter_penalty": 0.00025
+    },
+    "shared_bounds": {
+      "h": [
+        0.8,
+        1.3,
+        2.0,
+        2.8
+      ],
+      "e": [
+        1.8,
+        2.2,
+        1.8,
+        2.2
+      ],
+      "a": [
+        1.3,
+        1.7,
+        1.3,
+        1.7
+      ],
+      "s": [
+        0.9,
+        1.2,
+        2.8,
+        3.5
+      ],
+      "fc_e": [
+        2.0,
+        6.0
+      ],
+      "pc_e": [
+        1.0,
+        4.0
+      ],
+      "fc_h": [
+        3.0,
+        10.0
+      ],
+      "pc_h": [
+        1.0,
+        4.0
+      ]
+    }
+  },
+  "ssi": {
+    "mape_percent": 1.8971099853515625,
+    "r2": 0.9997389824305293,
+    "active_terms": 9,
+    "identified_terms": [
+      {
+        "index": 46,
+        "label": "f^1.8 * B^1.6",
+        "coefficient": 0.4481795132160187,
+        "contribution_percent": 13.111133575439453
+      },
+      {
+        "index": 74,
+        "label": "f^1 * B^2 / (1+(f/0.5)^2)",
+        "coefficient": 0.3525782525539398,
+        "contribution_percent": 7.3852434158325195
+      },
+      {
+        "index": 77,
+        "label": "f^1 * B^2 / (1+(f/0.75)^2)",
+        "coefficient": 0.6389755010604858,
+        "contribution_percent": 16.698118209838867
+      },
+      {
+        "index": 81,
+        "label": "f^1.5 * B^2.4 / (1+(f/1)^2)",
+        "coefficient": 0.3783325254917145,
+        "contribution_percent": 8.778800010681152
+      },
+      {
+        "index": 91,
+        "label": "f^2 * B^2 / (1+(f/3)^2)",
+        "coefficient": 0.7850306630134583,
+        "contribution_percent": 18.131128311157227
+      },
+      {
+        "index": 92,
+        "label": "f^1 * B^2 * ln(B)",
+        "coefficient": 0.4633391797542572,
+        "contribution_percent": 12.462372779846191
+      },
+      {
+        "index": 95,
+        "label": "f^1.4 * B^2.4 * ln(f)",
+        "coefficient": 0.22841136157512665,
+        "contribution_percent": 6.7996015548706055
+      },
+      {
+        "index": 96,
+        "label": "f^1.8 * B^2.4 * ln(B)",
+        "coefficient": 0.49033644795417786,
+        "contribution_percent": 8.313436508178711
+      },
+      {
+        "index": 97,
+        "label": "f^1.8 * B^2.4 * ln(f)",
+        "coefficient": 0.41897472739219666,
+        "contribution_percent": 8.320164680480957
+      }
+    ],
+    "precision_note": "saved experiment precision"
+  }
+}

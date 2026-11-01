@@ -1,0 +1,7 @@
+name: fr79
+data:
+  mat_path: data/CoreLossData_FR79.mat
+  f_scale: 1.0
+  b_scale: 1.0
+train:
+  output_dir: results/fr79

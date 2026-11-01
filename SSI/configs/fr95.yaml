@@ -1,0 +1,54 @@
+# Reference configuration: FR95 ferrite core-loss identification.
+name: fr95
+
+data:
+  mat_path: data/CoreLossData_FR95.mat
+  f_scale: 1000.0   # Hz     -> kHz
+  b_scale: 10.0     # 0.1 mT -> mT
+  p_scale: 1.0      # mW/cm^3
+  test_stride: 5
+  seed: 0
+
+library:
+  f_exponents:  [1.0, 1.2, 1.4, 1.5, 1.6, 1.8, 2.0, 2.2]
+  b_exponents:  [1.6, 1.8, 2.0, 2.2, 2.4, 2.5, 2.6, 2.8, 3.0]
+  rolloff_cutoffs: [0.5, 0.75, 1.0, 1.5, 2.0, 3.0]
+  rolloff_pairs:
+    - [1.0, 2.0]
+    - [1.5, 2.4]
+    - [2.0, 2.0]
+  log_correction_pairs:
+    - [1.0, 2.0]
+    - [1.4, 2.4]
+    - [1.8, 2.4]
+  saturation_b0: [2.0, 4.0]
+  eps: 1.0e-8
+
+train:
+  seed: 0
+  device: cpu
+  w_log: 0.5
+  w_mape: 0.5
+  coef_init_low: 0.01
+  coef_init_high: 0.06
+  phase1_epochs: 1200
+  phase1_lr: 0.01
+  phase2_epochs: 30001
+  phase2_lr: 0.005
+  coef_weight_decay: 0.05
+  scheduler_patience: 250
+  scheduler_factor: 0.5
+  max_prune_threshold: 0.1
+  prune_start_frac: 0.3
+  prune_check_every: 250
+  min_terms: 2
+  phase3_steps: 200
+  phase3_lr: 0.01
+  phase3_max_iter: 20
+  phase3_history_size: 50
+  min_contribution: 0.005
+  phase4_steps: 100
+  log_every: 100
+  print_every: 2000
+  param_sample_every: 100
+  output_dir: results/fr95

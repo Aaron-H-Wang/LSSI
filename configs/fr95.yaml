@@ -1,0 +1,58 @@
+# Reference configuration: FR95 ferrite core-loss identification.
+name: fr95
+
+data:
+  mat_path: data/CoreLossData_FR95.mat
+  f_key: f
+  b_key: B
+  p_key: P
+  f_scale: 1000.0   # Hz     -> kHz
+  b_scale: 10.0     # 0.1 mT -> mT
+  p_scale: 1.0      # mW/cm^3
+  test_stride: 5    # every 5th sorted sample is held out
+  sort_data: true
+
+model:
+  bounds_h:  [0.8, 1.3, 2.0, 2.8]   # hysteresis: (alpha_lo, alpha_hi, beta_lo, beta_hi)
+  bounds_e:  [1.8, 2.2, 1.8, 2.2]   # eddy current
+  bounds_a:  [1.3, 1.7, 1.3, 1.7]   # anomalous / excess
+  bounds_s:  [0.9, 1.2, 2.8, 3.5]   # saturation
+  bounds_fc:  [2.0, 6.0]            # eddy roll-off corner (normalised)
+  bounds_pc:  [1.0, 4.0]            # eddy roll-off sharpness
+  bounds_fc2: [3.0, 10.0]           # hysteresis roll-off corner (normalised)
+  bounds_pc2: [1.0, 4.0]            # hysteresis roll-off sharpness
+  init_gamma_h: 0.0
+  init_sat_g: -0.5
+  init_raw_fc2: 1.0
+  coef_init_scale: 0.1
+  eps: 1.0e-8
+
+train:
+  seed: 0
+  device: cpu
+  threads: 4
+  w_log: 0.5
+  w_mape: 0.5
+  phase1_epochs: 1200
+  phase1_lr: 0.01
+  phase2_epochs: 40000
+  phase2_lr: 0.001
+  coef_weight_decay: 0.002
+  scheduler_patience: 800
+  scheduler_factor: 0.5
+  prune_start_ratio: 0.75
+  max_prune_threshold: 0.001
+  raw_parameter_penalty: 0.00025
+  min_contribution: 0.001
+  prune_interval: 100
+  min_terms: 2
+  phase3_steps: 100
+  phase3_lr: 0.02
+  refit_steps: 50
+  refit_lr: 0.01
+  phase3_max_iter: 20
+  phase3_history_size: 50
+  log_every: 100
+  print_every: 1000
+  param_sample_every: 100
+  output_dir: results/fr95

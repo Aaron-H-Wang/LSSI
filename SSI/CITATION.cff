@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: "SSI: Sparse System Identification of Magnetic Core Loss"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: Wang
+    given-names: Aaron H.
+version: 0.1.0
+date-released: "2026-07-28"
+license: MIT
+repository-code: "https://github.com/Aaron-H-Wang/LSSI/tree/main/SSI"
+keywords:
+  - core loss
+  - magnetics
+  - power electronics
+  - sparse regression
+  - SINDy

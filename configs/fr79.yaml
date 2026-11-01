@@ -1,0 +1,9 @@
+# Same model, bounds, penalties, and schedule as FR78 and FR95.
+name: fr79
+data:
+  mat_path: data/CoreLossData_FR79.mat
+  f_scale: 1.0
+  b_scale: 1.0
+train:
+  seed: 0
+  output_dir: results/fr79

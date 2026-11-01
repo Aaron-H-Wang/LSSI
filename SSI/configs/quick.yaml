@@ -1,0 +1,30 @@
+# Fast smoke-test configuration: same pipeline, far fewer epochs and a smaller library.
+name: fr95_quick
+
+data:
+  mat_path: data/CoreLossData_FR95.mat
+  test_stride: 5
+
+library:
+  f_exponents: [1.0, 1.5, 2.0]
+  b_exponents: [2.0, 2.4, 2.8]
+  rolloff_cutoffs: [1.0, 2.0]
+  rolloff_pairs:
+    - [1.0, 2.0]
+    - [2.0, 2.0]
+  log_correction_pairs:
+    - [1.0, 2.0]
+  saturation_b0: [2.0]
+
+train:
+  seed: 0
+  phase1_epochs: 150
+  phase2_epochs: 1501
+  prune_start_frac: 0.3
+  prune_check_every: 100
+  phase3_steps: 30
+  phase4_steps: 20
+  log_every: 50
+  print_every: 500
+  param_sample_every: 25
+  output_dir: results/quick

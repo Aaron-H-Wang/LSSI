@@ -1,0 +1,8 @@
+# All three materials use the same 103-term fixed library and training defaults.
+name: fr78
+data:
+  mat_path: data/CoreLossData_FR78.mat
+  f_scale: 1.0
+  b_scale: 1.0
+train:
+  output_dir: results/fr78

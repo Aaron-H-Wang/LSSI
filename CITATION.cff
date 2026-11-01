@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: "LSSI: Learnable Symbolic Sparse Identification for Magnetic Core Loss"
+message: "If you use this software, please also cite the preprint listed in README.md."
+type: software
+authors:
+  - family-names: Wang
+    given-names: Haoyu
+version: 0.2.0
+date-released: "2026-11-01"
+license: MIT
+repository-code: "https://github.com/Aaron-H-Wang/LSSI"
+keywords:
+  - core loss
+  - magnetics
+  - sparse regression
+  - learnable symbolic identification
