@@ -1,0 +1,94 @@
+{
+  "scope": "Updated SSI paper reference artifacts",
+  "training_figure_display_end": 40000,
+  "verification_runtime": {
+    "python": "3.12.13",
+    "numpy": "2.3.5"
+  },
+  "materials": {
+    "FR78": {
+      "recomputed_metrics": {
+        "train": {
+          "mape_percent": 1.9104732426192805,
+          "r2": 0.9997642465970795,
+          "rmse_mw_cm3": 1.0134322289302007
+        },
+        "test": {
+          "mape_percent": 1.8879940660347934,
+          "r2": 0.9997559434577393,
+          "rmse_mw_cm3": 1.1327815309824425
+        }
+      },
+      "maximum_equation_reconstruction_relative_error": 3.922661029628815e-07,
+      "display_tail_audit": {
+        "max_coefficient_abs_range": 8.165836334228516e-06,
+        "max_coefficient_relative_range": 7.717780681559816e-05,
+        "objective_relative_range": 5.511223882998921e-07
+      },
+      "display_tail_steady": true,
+      "data_sha256_verified": true
+    },
+    "FR79": {
+      "recomputed_metrics": {
+        "train": {
+          "mape_percent": 1.041066839259016,
+          "r2": 0.9995543414296281,
+          "rmse_mw_cm3": 7.102854073342392
+        },
+        "test": {
+          "mape_percent": 1.0112811609124095,
+          "r2": 0.9995343511487988,
+          "rmse_mw_cm3": 7.520480645529768
+        }
+      },
+      "maximum_equation_reconstruction_relative_error": 3.716526896854128e-07,
+      "display_tail_audit": {
+        "max_coefficient_abs_range": 3.769993782043457e-06,
+        "max_coefficient_relative_range": 2.537947329983581e-05,
+        "objective_relative_range": 3.499759435285817e-07
+      },
+      "display_tail_steady": true,
+      "data_sha256_verified": true
+    },
+    "FR95": {
+      "recomputed_metrics": {
+        "train": {
+          "mape_percent": 1.5778036179032644,
+          "r2": 0.9997026841890292,
+          "rmse_mw_cm3": 5.356882931320063
+        },
+        "test": {
+          "mape_percent": 1.5600862819495815,
+          "r2": 0.9996573934248244,
+          "rmse_mw_cm3": 5.612974540318833
+        }
+      },
+      "maximum_equation_reconstruction_relative_error": 3.477621253840245e-07,
+      "display_tail_audit": {
+        "max_coefficient_abs_range": 7.12275505065918e-06,
+        "max_coefficient_relative_range": 1.9817305656033568e-05,
+        "objective_relative_range": 4.415301492239445e-07
+      },
+      "display_tail_steady": true,
+      "data_sha256_verified": true
+    }
+  },
+  "files_sha256": {
+    "reference_results/FR78.json": "9bdc539a9362b6b42d4eca26c94016640d0c64114ad865a2abb9db68b4d1b27b",
+    "reference_results/FR78_equation.txt": "d107755cfd4b49eb0e50c8a4b0a09f01c152481f416ba54d334b4e379d5d1705",
+    "reference_results/FR78_history.npz": "11c178e7ff7c70b21f1712d6502e991880deb6f61f5e901d4ebf27fa92fb5604",
+    "reference_results/FR78_predictions.csv": "aea32cd9d7df6f469256c9a12a21ae43e1bed112f2dfa5ee4827d5eb77218c84",
+    "reference_results/FR79.json": "4f3812d7f7932727f704b1fd043c763dd711ff55575f45e7100de966b75b1a55",
+    "reference_results/FR79_equation.txt": "dcf974100abeb035f0c78927258026a7798fb4d83e556156d6e768376f44347c",
+    "reference_results/FR79_history.npz": "bb88b4894976583e921e822c0b5c01d910a344cb378e3a005f0db8c71e2adff3",
+    "reference_results/FR79_predictions.csv": "1b158451a5924439fde2f32c94dcbaa31299e5553ada329309c90d79c66988b0",
+    "reference_results/FR95.json": "1fca78f3530f56ca9e88bebbfdcdaaefd3ebe4cd187ac820e35b265c32c42b19",
+    "reference_results/FR95_equation.txt": "192638561dce50cdaa3e87343df5ba832d782954fb6e4d655c4565a1d072ffb2",
+    "reference_results/FR95_history.npz": "ae1bc478f1f4b504f37db8141e48e9b2f4ac82cb1905d1fa28deec04e419a007",
+    "reference_results/FR95_predictions.csv": "9d1dc147c85bd55401cc6f9484d19d8adc169bb05ce6fa42346db3608418dfc3",
+    "reference_results/README.md": "94af04dda8ee1a4de88647622a7c8aacc8b2d1c0d90750d0aaf5e5582f520163",
+    "assets/ssi_diagnostics.png": "e5031941c9120bc6266f4bbbcee6f9b4d1043db26d4d09bff4a80d6bfb992194",
+    "assets/ssi_training.png": "ec56b5f9e3b355f3691cdf38f5f51862b4bbb4880fbe98320c66d420eee9f5d6"
+  },
+  "hash_convention": "SHA-256 of published file bytes; text uses LF newlines"
+}

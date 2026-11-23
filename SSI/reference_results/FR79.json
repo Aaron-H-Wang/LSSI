@@ -1,0 +1,152 @@
+{
+  "material": "FR79",
+  "samples": 1240,
+  "training_samples": 992,
+  "test_samples": 248,
+  "frequency_khz": [
+    59.5,
+    893.1
+  ],
+  "flux_density_mt": [
+    12.528980322409854,
+    377.999715441794
+  ],
+  "loss_mw_cm3": [
+    7.759014158062442,
+    2004.3099831454329
+  ],
+  "normalization": {
+    "f_khz": 360.3162322801159,
+    "B_mt": 88.4503697030867,
+    "P_mw_cm3": 288.6610049688393
+  },
+  "train": {
+    "mape_percent": 1.0410668392590163,
+    "r2": 0.9995543414296281,
+    "rmse_mw_cm3": 7.102854073342392
+  },
+  "test": {
+    "mape_percent": 1.0112811609124095,
+    "r2": 0.9995343511487988,
+    "rmse_mw_cm3": 7.520480645529768
+  },
+  "candidate_count": 103,
+  "active_term_count": 10,
+  "active_terms": [
+    {
+      "index": 3,
+      "label": "f^1 * B^2",
+      "coefficient": 0.1853259950876236,
+      "absolute_contribution_percent": 11.841934903749522
+    },
+    {
+      "index": 4,
+      "label": "f^1 * B^2.2",
+      "coefficient": 0.17494873702526093,
+      "absolute_contribution_percent": 11.922881596736392
+    },
+    {
+      "index": 13,
+      "label": "f^1.2 * B^2.2",
+      "coefficient": 0.16478873789310455,
+      "absolute_contribution_percent": 9.87479625840752
+    },
+    {
+      "index": 41,
+      "label": "f^1.6 * B^2.4",
+      "coefficient": 0.21331316232681274,
+      "absolute_contribution_percent": 10.918684475425614
+    },
+    {
+      "index": 51,
+      "label": "f^1.8 * B^2.5",
+      "coefficient": 0.2732604146003723,
+      "absolute_contribution_percent": 13.124911878585962
+    },
+    {
+      "index": 74,
+      "label": "f^1 * B^2 / (1+(f/0.5)^2)",
+      "coefficient": 0.22440245747566223,
+      "absolute_contribution_percent": 6.884287638556189
+    },
+    {
+      "index": 90,
+      "label": "f^1.5 * B^2.4 / (1+(f/3)^2)",
+      "coefficient": 0.27924084663391113,
+      "absolute_contribution_percent": 13.61976053655281
+    },
+    {
+      "index": 92,
+      "label": "f^1 * B^2 * ln(B)",
+      "coefficient": 0.19071124494075775,
+      "absolute_contribution_percent": 7.558134991267414
+    },
+    {
+      "index": 98,
+      "label": "f * B^2 * (exp(B/2)-1)",
+      "coefficient": 0.05608752369880676,
+      "absolute_contribution_percent": 5.7525225526066075
+    },
+    {
+      "index": 99,
+      "label": "f * B^2 * (exp(B/4)-1)",
+      "coefficient": 0.23927897214889526,
+      "absolute_contribution_percent": 8.502085168111966
+    }
+  ],
+  "continuation": {
+    "base_global_end": 31200,
+    "final_global_epoch": 60000,
+    "warmup_end": 1200,
+    "pruning_onset": 10200.3,
+    "first_pruning_checkpoint": 10450,
+    "support_fixed_after": 31200,
+    "sample_interval": 100,
+    "steady_audit": {
+      "window_epochs": 5000,
+      "max_coefficient_abs_range": 1.2487173080444336e-05,
+      "max_coefficient_relative_range": 7.548900612164289e-05,
+      "objective_relative_range": 8.749418491773491e-07,
+      "steady": true
+    },
+    "steady_abs_tolerance": 5e-05,
+    "steady_relative_tolerance": 0.001,
+    "steady_objective_tolerance": 0.001,
+    "replay_max_coefficient_difference": 0.0,
+    "refinement_max_scaled_coefficient_change": 0.0,
+    "old_test_mape_percent": 1.016709827180003,
+    "elapsed_seconds": 66.87817530002212
+  },
+  "provenance": {
+    "source_sha256": "11b6280f69b269d27671ad88f4497c793fff1e99855711db386f82b8e97d5215",
+    "data_sha256": "ef4fb0924f61b66b0ee4b4b6993c34777dd4e59e88e0a2494efe87cd5dea909f",
+    "python": "3.12.13",
+    "torch": "2.14.0+cpu",
+    "numpy": "2.3.5",
+    "seed": 0,
+    "cpu_threads": 1,
+    "reference_kind": "paper experiment with fixed-support continuation"
+  },
+  "display_tail_audit": {
+    "window_start": 35000,
+    "window_end": 40000,
+    "max_coefficient_abs_range": 3.769993782043457e-06,
+    "max_coefficient_relative_range": 2.537947329983581e-05,
+    "objective_relative_range": 3.499759435285817e-07,
+    "steady": true
+  },
+  "training_settings": {
+    "warmup_updates": 1200,
+    "warmup_lr": 0.01,
+    "discovery_updates": 30001,
+    "discovery_initial_lr": 0.005,
+    "coefficient_weight_decay": 0.05,
+    "pruning_start_fraction": 0.3,
+    "pruning_check_every": 250,
+    "maximum_pruning_threshold": 0.1,
+    "minimum_terms": 2,
+    "contribution_threshold": 0.005,
+    "fixed_support_continuation_end": 60000,
+    "training_figure_display_end": 40000
+  }
+}

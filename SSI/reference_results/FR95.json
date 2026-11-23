@@ -1,0 +1,134 @@
+{
+  "material": "FR95",
+  "samples": 1320,
+  "training_samples": 1056,
+  "test_samples": 264,
+  "frequency_khz": [
+    52.44,
+    1029.0
+  ],
+  "flux_density_mt": [
+    10.972366063625172,
+    391.08580805166696
+  ],
+  "loss_mw_cm3": [
+    7.16304213826205,
+    1643.8006269044117
+  ],
+  "normalization": {
+    "f_khz": 372.5722676040187,
+    "B_mt": 102.59707939824472,
+    "P_mw_cm3": 303.9456536522968
+  },
+  "train": {
+    "mape_percent": 1.5778036179032642,
+    "r2": 0.9997026841890292,
+    "rmse_mw_cm3": 5.356882931320063
+  },
+  "test": {
+    "mape_percent": 1.5600862819495815,
+    "r2": 0.9996573934248244,
+    "rmse_mw_cm3": 5.612974540318833
+  },
+  "candidate_count": 103,
+  "active_term_count": 7,
+  "active_terms": [
+    {
+      "index": 73,
+      "label": "f^1.5 * B^1.5",
+      "coefficient": 0.29833483695983887,
+      "absolute_contribution_percent": 10.018116020783102
+    },
+    {
+      "index": 74,
+      "label": "f^1 * B^2 / (1+(f/0.5)^2)",
+      "coefficient": 0.48195865750312805,
+      "absolute_contribution_percent": 10.557647429374454
+    },
+    {
+      "index": 77,
+      "label": "f^1 * B^2 / (1+(f/0.75)^2)",
+      "coefficient": 0.47325363755226135,
+      "absolute_contribution_percent": 13.013767215855665
+    },
+    {
+      "index": 91,
+      "label": "f^2 * B^2 / (1+(f/3)^2)",
+      "coefficient": 1.2730636596679688,
+      "absolute_contribution_percent": 32.03612133727922
+    },
+    {
+      "index": 92,
+      "label": "f^1 * B^2 * ln(B)",
+      "coefficient": 0.45895659923553467,
+      "absolute_contribution_percent": 12.593973142839529
+    },
+    {
+      "index": 94,
+      "label": "f^1.4 * B^2.4 * ln(B)",
+      "coefficient": 0.39820608496665955,
+      "absolute_contribution_percent": 9.365749232410247
+    },
+    {
+      "index": 95,
+      "label": "f^1.4 * B^2.4 * ln(f)",
+      "coefficient": 0.4051949083805084,
+      "absolute_contribution_percent": 12.414625621457787
+    }
+  ],
+  "continuation": {
+    "base_global_end": 31200,
+    "final_global_epoch": 60000,
+    "warmup_end": 1200,
+    "pruning_onset": 10200.3,
+    "first_pruning_checkpoint": 10450,
+    "support_fixed_after": 31200,
+    "sample_interval": 100,
+    "steady_audit": {
+      "window_epochs": 5000,
+      "max_coefficient_abs_range": 6.735324859619141e-06,
+      "max_coefficient_relative_range": 1.8737888240139e-05,
+      "objective_relative_range": 4.415303929101699e-07,
+      "steady": true
+    },
+    "steady_abs_tolerance": 5e-05,
+    "steady_relative_tolerance": 0.001,
+    "steady_objective_tolerance": 0.001,
+    "replay_max_coefficient_difference": 0.0,
+    "refinement_max_scaled_coefficient_change": 0.0,
+    "old_test_mape_percent": 1.5600756731617833,
+    "elapsed_seconds": 67.40256939997198
+  },
+  "provenance": {
+    "source_sha256": "f00c9a77255a363773e787f8311067faa8b738dc0471944bcf56c70df05f8650",
+    "data_sha256": "943a8275f43769c84a0bbd8e2397431735faa4025d5e69079d23c8c7d87fc99b",
+    "python": "3.12.13",
+    "torch": "2.14.0+cpu",
+    "numpy": "2.3.5",
+    "seed": 0,
+    "cpu_threads": 1,
+    "reference_kind": "paper experiment with fixed-support continuation"
+  },
+  "display_tail_audit": {
+    "window_start": 35000,
+    "window_end": 40000,
+    "max_coefficient_abs_range": 7.12275505065918e-06,
+    "max_coefficient_relative_range": 1.9817305656033568e-05,
+    "objective_relative_range": 4.415301492239445e-07,
+    "steady": true
+  },
+  "training_settings": {
+    "warmup_updates": 1200,
+    "warmup_lr": 0.01,
+    "discovery_updates": 30001,
+    "discovery_initial_lr": 0.005,
+    "coefficient_weight_decay": 0.05,
+    "pruning_start_fraction": 0.3,
+    "pruning_check_every": 250,
+    "maximum_pruning_threshold": 0.1,
+    "minimum_terms": 2,
+    "contribution_threshold": 0.005,
+    "fixed_support_continuation_end": 60000,
+    "training_figure_display_end": 40000
+  }
+}

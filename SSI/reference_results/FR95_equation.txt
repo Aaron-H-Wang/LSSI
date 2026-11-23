@@ -1,0 +1,16 @@
+SSI equation for FR95
+F = f / 372.57226760401869  (f in kHz)
+b = B / 102.59707939824472  (B in mT)
+P_v = 303.94565365229681 * p  (P_v in mW/cm^3)
+
+p =
+  0.29833483695983887 * (F^1.5 * b^1.5)  [xi_73]
++ 0.48195865750312805 * (F^1 * b^2 / (1+(F/0.5)^2))  [xi_74]
++ 0.47325363755226135 * (F^1 * b^2 / (1+(F/0.75)^2))  [xi_77]
++ 1.2730636596679688 * (F^2 * b^2 / (1+(F/3)^2))  [xi_91]
++ 0.45895659923553467 * (F^1 * b^2 * ln(b))  [xi_92]
++ 0.39820608496665955 * (F^1.4 * b^2.4 * ln(b))  [xi_94]
++ 0.40519490838050842 * (F^1.4 * b^2.4 * ln(F))  [xi_95]
+
+Coefficients have column scaling removed. Inputs F and b are normalized.
+Powers use ^; ln and exp denote natural logarithm and exponential.
